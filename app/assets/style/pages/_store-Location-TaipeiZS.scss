@@ -1,0 +1,118 @@
+.store-TaipeiZS {
+    &-Information {
+        display: flex;
+        @include section-Padding(32px,160px);
+    }
+
+    &-Card {
+        font-size: 20px;
+        width: 445px;
+        margin-right: 30px;
+        border: 1px solid $locationBrdColor;
+
+        h3 {
+            font-size: 24px;
+            font-weight: 500;
+            padding: 12px 24px;
+            border-bottom: 1px solid $locationBrdColor;
+        }
+
+        &-Image {
+            width: 445px;
+            height: 224px;
+        }
+
+        &-Content {
+            padding: 16px 0;
+            img {
+                padding-right: 10px;
+            }
+
+            li {
+                display: flex;
+                align-items: flex-start;
+                margin: 0 !important;
+                bottom: none;
+                padding: 8px 16px;
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &-Map {
+        width: 635px;
+    }
+
+    @include tablet() {
+
+        &-Information {
+            flex-direction: column;
+            @include section-Padding(24px,96px);
+        }
+
+        &-Card {
+            display: flex;
+            padding-bottom: 32px;
+            align-items: center;
+            font-size: 14px;
+            width: 100%;
+            border: none;
+
+            &-Image {
+                width: 330px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            &-Intro {
+                width: 330px;
+                margin-left: 30px;
+                border: 1px solid $locationBrdColor;
+            }
+        }
+
+        &-Map {
+            width: 690px;
+            height: 422px;
+        }
+    }
+
+    @include phone() {
+
+        &-Information {
+            @include section-Padding(20px,56px);
+        }
+
+        &-Card {
+            display: block;
+            padding-bottom: 16px;
+            font-size: 14px;
+            width: 345px;
+
+            &-Image {
+                width: 345px;
+                display: block;
+            }
+
+            &-Intro {
+                width: 345px;
+                margin: 0;
+            }
+
+            li {
+                margin-top: 16px;
+                margin-right: 0;
+            }
+        }
+
+        &-Map {
+            width: 345px;
+            height: 211px;
+        }
+    }
+}
+

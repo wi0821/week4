@@ -1,0 +1,58 @@
+@mixin blogs-Header  {
+  &-Header {
+    background: $secondColor;
+    padding: 12px 0;
+    font-weight: 700;
+    font-size: 20px;
+    &-Menu {
+      @include flex-Between;
+    }
+
+    &-Link {
+      @include flex-Between;
+      li a {
+        display: block;
+        color: #fff;
+        margin-right: 48px;
+        &:hover {
+          color:lightgray;
+        }
+      }
+    }
+
+    &-Search a {
+      display: block;
+      &:hover {
+        filter:brightness(.8);
+      }
+    }
+  }
+
+  @include tablet() {
+    &-Header {
+      padding: 16px 0;
+      font-size: 16px;
+      &-Link li a {
+        margin-right: 32px;
+      }
+    }
+  }
+
+  @include phone() {
+    &-Header {
+      &-Link li {
+        a {
+          margin-right: 24px;
+        }
+
+        &:last-child a {
+          margin: 0;
+        }
+      }
+
+      &-Search {
+        display: none;
+      }
+    }
+  }
+}

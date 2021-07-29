@@ -1,0 +1,82 @@
+.sunGlasses-Product{
+    &-Navbar-List {
+        & li:nth-child(2) {
+            border-bottom: 8px solid $mainColor;
+        }
+        @include product-Navbar-PC;
+    }
+    &-items {
+        @include flex-Between;
+        flex-wrap: wrap;
+        padding-top: 40px;
+
+        li {
+            margin-bottom: 104px;
+        }
+
+        img {
+            width: 350px;
+            height: 224px;
+        }
+
+        & :nth-last-child(-n+4) {
+            margin-bottom: 0;
+        }
+    }
+
+    &-Pages {
+        display: none;
+        @include phone() {
+            @include product-Pages;
+            font-size: 16px;
+
+            & :nth-child(3),
+            li:nth-of-type(3) a
+            {
+                @include pageHover;
+            }
+
+            li a {
+                padding: 10px 12px;
+            }
+        }
+    }
+
+    @include tablet() {
+        @include product-Navbar-Tablet;
+
+        &-items {
+            padding-top: 32px;
+            justify-content: center;
+            li{
+                margin-bottom: 72px;
+                &:nth-child(2n+1) {
+                    margin-right: 30px;
+                }
+            }
+
+            img {
+                width: 330px;
+            }
+        }
+    }
+
+    @include phone() {
+        @include product-Navbar-Phone;
+
+        &-items {
+            @include section-Padding(20px,40px);
+            li {
+                margin-bottom: 32px;
+
+                &:nth-child(2n+1) {
+                    margin-right: 0;
+                }
+
+                &:nth-child(n+4):nth-child(-n+6) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
