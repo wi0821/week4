@@ -1,10 +1,27 @@
----
-title: 第三週 - RWD網站
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
+<!DOCTYPE html>
+<html>
 
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initaial-scale=1.0">
+	<title>第三週 - RWD網站</title>
+	<link rel="stylesheet" type="text/css" href="./assets/style/all.css">
+</head>
+
+<body>
+
+	<header class="header">
+		<h1 class="header-Logo"><a href="index.html">Glasses</a></h1>
+		<ul class="header-Menu">
+			<li><a href="products_optical.html">系列鏡框</a></li>
+			<li><a href="store-Locations.html">門市據點</a></li>
+			<li><a href="blogs.html">部落格</a></li>
+			<li><a href="FAQ.html">常見問題</a></li>
+		</ul>
+	</header>
+
+  
 <div class="banner">
 	<div class="banner-Text container">
 		<h2>Promise-Desert 2020 早春系列</h2>
@@ -159,3 +176,41 @@ current: index
 		</form>
 	</div>
 </div>
+
+
+	<footer class="footer">
+		<div class="container">
+			<div class="footer-Link">
+				<ul class="footer-Link-Menu">
+					<li><a href="index.html">首頁</a></li>
+					<li><a href="products_optical.html">系列鏡框</a></li>
+					<li><a href="store-Locations.html">門市據點</a></li>
+					<li><a href="blogs.html">部落格</a></li>
+					<li><a href="FAQ.html">常見問題</a></li>
+				</ul>
+
+        <ul class="footer-Link-Social">
+					<li><a href="#"><img src="./assets/images/icon-fb.svg" alt="Facebook icon"></a></li>
+					<li><a href="#"><img src="./assets/images/icon-ig.svg" alt="Instargram icon"></a></li>
+					<li><a href="#"><img src="./assets/images/icon-line.svg" alt="Line icon"></a></li>
+				</ul>
+			</div>
+
+			<ul class="footer-Contact">
+				<li><img src="./assets/images/icon-phone.svg" alt="Phone icon"><a href="tel:+8860800000000">0800-000-000</a></li>
+				<li><img src="./assets/images/icon-mail.svg" alt="Mail icon"><a href="mailto:glasses@business.com">glasses@business.com</a></li>
+			</ul>
+
+			<div class="footer-Copyright">
+				<h4>Copyright © 2020 Glasses.All rights reserved.</h4>
+				<ul class="footer-Copyright-List">
+					<li><a href="#">隱私權政策</a></li>
+					<li><a href="#">服務條款</a></li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+</body>
+
+</html>
