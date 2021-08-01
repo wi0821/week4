@@ -1,0 +1,66 @@
+.header {
+	@include flex-Between;
+	align-items: center;
+	padding :30px 88px;
+	&-Logo a {
+		display: block;
+		background: url(../images/logo.png) no-repeat;
+		background-size: contain;
+		width: 80px;
+		height: 48px;
+		text-indent: 100%;
+		white-space: nowrap;
+		overflow: hidden;
+	}
+
+	&-Menu {
+		@include flex-Between;
+		font-size: 20px;
+
+		li {
+			padding-right: 64px;
+
+			a {
+				color: #fff;
+			}
+
+			&:last-child {
+				padding-right: 0;
+			}
+
+			@include tablet() {
+				padding-right: 40px;
+			}
+		}
+	}
+
+	@include phone() {
+		flex-direction: column;
+		align-items: center;
+		border: 1px solid #fff;
+		padding: 0;
+		&-Logo {
+			padding: 10px 0;
+			a {
+				width: 48px;
+				height: 29px;
+			}
+		}
+
+		&-Menu {
+			flex-wrap: wrap;
+			text-align: center;
+			width: 100%;
+			justify-content: center;
+			li {
+				width: 50%;
+				border: 1px solid #fff;
+				border-bottom:none;
+				a {
+					padding: 10px 0;
+					display: block;
+				}
+			}
+		}
+	}
+}

@@ -40,8 +40,7 @@
     }
 
     @include tablet() {
-        background: url(../images/banner-sm.png) no-repeat center center;
-		background-size: cover;
+        background: url(../images/banner-sm.png);
         &-Text {
             font-size: 20px;
             p {
@@ -103,14 +102,14 @@
 
 .product-Classic-Content {
     @include section-Padding(40px,80px);
-    @include flex-Center;
-	flex-direction: column;
     &-Image {
-        width: 635px;
-        height: 320px;
+        max-width: 635px;
+        height: auto;
     }
 
     h3 {
+        display: flex;
+        align-items: center;
         font-family: "Roboto";
         font-style: italic;
         font-size: 48px;
@@ -121,7 +120,7 @@
     }
 
     li {
-        @include flex-Center;
+        display: flex;
         align-items: center;
         &:nth-child(2) {
             flex-direction: row-reverse;
@@ -133,15 +132,20 @@
 
         h3 span {
             padding-right: 10px;
+            img {
+                width: 50px;
+                height: 50px;
+            }
         }
     }
 
     @include tablet() {
         @include section-Padding(32px,56px);
+        @include flex-Center;  //如果沒設flex，卡片會跑版
+        flex-direction: column;
         align-items: flex-start;
         &-Image {
-            width: 390px;
-            height: 168px;
+            max-width: 390px;
         }
 
         h3 {
@@ -165,15 +169,25 @@
 
     @include phone() {
         @include section-Padding(20px,40px);
+        li {
+            position: relative;
+            justify-content: center; //讓文字能夠在圖片上置中對齊
+        }
+
         &-Image {
-            width: 345px;
-            height: 134px;
+            max-width: 345px;
         }
 
         h3 {
-            padding: 0;
             position: absolute;
+            padding: 0;
+            // left: 0;
+            // transform: translateX(50%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
         }
+
     }
 }
 
@@ -181,28 +195,40 @@
 	background: url(../images/bg.png) center center;
 	background-size: cover;
     &-Card {
+        position: relative;
         display: flex;
         @include section-Padding(40px,80px);
 
         h3 {
-            @include flex-Center;
+            text-align: center;
             color: $mainColor;
             font-size: 72px;
             font-weight: 700;
-            position: relative;
-            top: 250px;
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
             z-index: 1;
-            line-height: 0;
+        }
+
+        &-Size::before {
+            content: '';
+            background-color: rgba(255, 255, 255, 0.6);
+            width: 100%;
+            height: 100%;
+            position: absolute;
         }
 
         &-Size {
-            height: 450px;
+            position: relative;
             width: 540px;
-            opacity: 0.4;
+            height: 450px;
         }
 
         &1{
-            background: url(../images/product-8.png)  no-repeat;
+            background-color: #fff;
+            background: url(../images/product-8.png);
             background-size: cover;
             margin-right: 30px;
         }
@@ -255,15 +281,23 @@
         width: 255px;
         margin-right: 30px;
         box-shadow: 5px 5px 5px gainsboro;
+        border-radius: 10px;
         &:last-child {
             margin: 0;
         }
 
+        &:hover {
+            transition: .4s;
+            color: #fff;
+            background: $mainColor;
+        }
+
         img {
+            border-radius: 10px 10px 0 0;
             display: block;
-            height: 256px;
+            height: 250px;
             width: 255px;
-            max-width: 100%;
+            object-fit: cover;
         }
     }
 
@@ -278,6 +312,10 @@
                 margin-right: 0;
             }
 
+            &:last-child {
+                margin-top: 32px;
+            }
+
             img {
                 width: 330px;
             }
@@ -288,11 +326,16 @@
         @include section-Padding(20px,40px);
         li {
             width: 345px;
-            margin-right: 0;
             margin-top: 16px;
+            margin-right: 0;
 
             &:nth-child(1) {
                 margin-top: 0;
+            }
+
+
+            &:last-child {
+                margin-top: 16px;
             }
 
             img {
@@ -322,21 +365,22 @@
 .contact {
     background: $mainColorLight;
     &-Form {
-        width: 730px;
+        width: 65%;
         margin: 0 auto;
         p {
             @include section-Padding(24px,20px);
             font-size: 20px;
         }
 
-        input[type="text"],textarea {
-            @include input-Adj(710px,50px,16px);
+        .formInput {
+            width: 100%;
+            padding: 15px 0 15px 16px;
             background: $mainColorLight;
             border: 1px solid #000;
+            margin-bottom: 16px;
         }
 
         textarea {
-            padding-top: 12px;
             height: 136px;
             resize: none;
         }
@@ -349,9 +393,9 @@
                 font-weight: 700;
                 background: $mainColor;
                 color: #fff;
-                padding: 16px 143px;
-                margin-top: 40px;
-                margin-bottom: 80px;
+                padding: 16px 0;
+                width: 50%;
+                @include section-Margin(40px,80px);
                 text-align: center;
                 cursor: pointer;
                 &:hover{
@@ -361,22 +405,16 @@
         }
 
         @include tablet() {
-            width: 450px;
-
             p {
                 font-size: 16px;
                 padding-bottom: 16px;
             }
 
-            input[type="text"],
-            textarea {
-                width: 450px;
-                height: 36px;
-                padding-left: 12px;
+            .formInput {
+                padding: 9px 0 9px 12px;
             }
 
             textarea {
-                padding-top: 8px;
                 height: 100px;
             }
 
@@ -386,27 +424,20 @@
         }
 
         @include phone() {
-            width: 345px;
+            width: 100%;
             font-size: 14px;
 
             p {
                 @include section-Padding(20px,8px);
             }
 
-            input[type="text"],
-            textarea {
-                width: 345px;
+            .formInput {
                 font-size: 14px;
-            }
-
-            textarea {
-                height: 100px;
             }
 
             &-btn {
                 padding: 8px 55px;
-                margin-top: 28px;
-                margin-bottom: 48px;
+                @include section-Margin(28px,48px);
                 font-size: 14px;
             }
         }

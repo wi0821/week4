@@ -57,7 +57,7 @@ current: index
 		<ul class="product-Classic-Content">
 			<li>
 				<img src="./assets/images/product-1.png" alt="Product image" class="product-Classic-Content-Image">
-				<h3><span><img src="./assets/images/icon-star.svg" alt="Star icon" width="50" height="50"></span>optical</h3>
+				<h3><span><img src="./assets/images/icon-star.svg" alt="Star icon"></span>optical</h3>
 			</li>
 			<li>
 				<img src="./assets/images/product-2.png" alt="Product image" class="product-Classic-Content-Image">
@@ -75,14 +75,12 @@ current: index
 	<div class="container">
 		<h2 class="subTitle whiteTitle">聯名設計鏡框</h2>
 		<ul class="product-Cobrand-Card">
-			<li>
+			<li class="product-Cobrand-Card1 product-Cobrand-Card-Size">
 				<h3>Double A+</h3>
-				<div class="product-Cobrand-Card1 product-Cobrand-Card-Size"></div>
 			</li>
 
-			<li>
+			<li class="product-Cobrand-Card2 product-Cobrand-Card-Size">
 				<h3>YOUTH</h3>
-				<div class="product-Cobrand-Card2 product-Cobrand-Card-Size"></div>
 			</li>
 		</ul>
 	</div>
@@ -99,7 +97,7 @@ current: index
 					<h3>Jessy</h3>
 					<p>眼鏡品質優良，下次還會想來這邊購買！</p>
 				</div>
-				<h3>2021/06/20</h3>
+				<time>2021/06/20</time>
 			</div>
 		</li>
 
@@ -110,7 +108,7 @@ current: index
 					<h3>凱倫</h3>
 					<p>做工細緻、鏡架很輕盈，待久也不會覺得有負擔，推薦給大家！</p>
 				</div>
-				<h3>2021/04/18</h3>
+				<time>2021/04/18</time>
 			</div>
 		</li>
 
@@ -121,7 +119,7 @@ current: index
 					<h3>悠悠</h3>
 					<p>謝謝客服人員的詳細回答，成功買到了喜歡的眼鏡，下次會再回購！</p>
 				</div>
-				<h3>2021/12/25</h3>
+				<time>2021/12/25</time>
 			</div>
 		</li>
 
@@ -132,13 +130,13 @@ current: index
 					<h3>Kyuan</h3>
 					<p>服務很好，品質沒有任何問題，非常喜歡。</p>
 				</div>
-				<h3>2020/10/31</h3>
+				<time>2020/10/31</time>
 			</div>
 		</li>
 	</ul>
 </div>
 
-<div class="contact">
+<!-- <div class="contact">
 	<div class="contact-Form">
 		<h2 class="subTitle blackTitle">聯絡我們</h2>
 		<p>我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
@@ -157,5 +155,37 @@ current: index
 			</div>
 			<div class="contact-Form-Btn"><input class="contact-Form-Btn-Submit" type="submit" value="確認送出"></div>
 		</form>
+	</div>
+</div> -->
+
+<div class="contact">
+	<div class="container">
+		<div class="contact-Form">
+			<h2 class="subTitle blackTitle">聯絡我們</h2>
+			<p>我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。</p>
+			<form action="./index.html" method="GET">
+				<label for="name">姓名
+				<input class="formInput" type="text" id="name" name="name" placeholder="陳小明">
+				</label>
+
+				<label for="phone">連絡電話
+				<input class="formInput" type="tel" id="phone" name="phone" placeholder="0912-345-678">
+				</label>
+
+				<label for="email"">電子郵件
+				<input class="formInput" type="email" id="email" name="email" placeholder="example@email.com">
+				</label>
+
+				<label for="comment">意見反應
+				<textarea class="formInput" id="comment" name="comment" placeholder="請輸入您的意見"></textarea>
+				</label>
+
+				<div class="contact-Form-cbx">
+					<input type="checkbox" id="cbxAgreet">
+					<label for="cbxAgreet">我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料。</label>
+				</div>
+				<div class="contact-Form-Btn"><input class="contact-Form-Btn-Submit" type="submit" value="確認送出"></div>
+			</form>
+		</div>
 	</div>
 </div>

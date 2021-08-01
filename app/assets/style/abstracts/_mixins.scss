@@ -30,6 +30,7 @@
       border: 1px solid #DCDCDC;
       display: block;
       width: 370px;
+      font-size: 32px;
       &:hover {
           border-bottom: 8px solid $mainColor;
       }
@@ -40,21 +41,14 @@
           padding: 20px 0;
       }
   }
-
-  h3 {
-      font-size: 32px;
-  }
 }
 
 @mixin product-Navbar-Tablet {
   &-Navbar-List {
     li a {
         padding: 14px 0;
+        font-size: 24px;
       }
-
-    h3 {
-       font-size: 24px;
-    }
   }
 }
 
@@ -63,10 +57,7 @@
     &-Navbar-List {
       li a {
           padding: 5px 0;
-      }
-
-      h3 {
-        font-size: 14px;
+          font-size: 14px;
       }
 
       img {

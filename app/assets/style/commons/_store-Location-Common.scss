@@ -11,7 +11,8 @@
 
         select {
             font-size: 18px;
-            @include input-Adj(324px,45px,16px);
+            padding: 10px 0 10px 16px;
+            width: 30%;
         }
     }
 

@@ -5,6 +5,7 @@
         }
         @include product-Navbar-PC;
     }
+
     &-items {
         @include flex-Between;
         flex-wrap: wrap;
@@ -17,6 +18,7 @@
         img {
             width: 350px;
             height: 224px;
+            object-fit: cover;
         }
 
         & :nth-last-child(-n+4) {

@@ -1,0 +1,13 @@
+.header, .footer {
+	background: $mainColor;
+}
+
+.header-Logo a:hover,
+.header-Menu a:hover,
+.footer-Link-Menu a:hover,
+.footer-Contact a:hover,
+.footer-Copyright-List a:hover,
+.footer-Link-Social a:hover {
+	filter:brightness(.8);
+	transition: .3s;
+}

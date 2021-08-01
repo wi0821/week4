@@ -9,8 +9,7 @@
     &-items {
         @include flex-Between;
         flex-wrap: wrap;
-        padding-top: 40px;
-        padding-bottom: 96px;
+        @include section-Padding(40px,96px);
 
         li {
             margin-bottom: 104px;
@@ -19,6 +18,7 @@
         img {
             width: 255px;
             height: 164px;
+            object-fit: cover;
         }
 
         & :nth-last-child(-n+4) {
@@ -47,8 +47,7 @@
         @include product-Navbar-Tablet;
 
         &-items {
-            padding-top: 32px;
-            padding-bottom: 65px;
+            @include section-Padding(32px,65px);
             justify-content: center;
             li{
                 margin-bottom: 72px;
