@@ -29,10 +29,11 @@
             font-size: 24px;
             font-weight: 500;
             padding: 12px 24px;
-            border: 1px solid $locationBrdColor;
+            border-bottom: 1px solid $locationBrdColor;
         }
 
         &-Image {
+            display: block;
             width: 330px;
             height: 224px;
             object-fit: cover;
