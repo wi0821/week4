@@ -24,10 +24,6 @@
 				color: #fff;
 			}
 
-			&:last-child {
-				padding-right: 0;
-			}
-
 			@include tablet() {
 				padding-right: 40px;
 			}
