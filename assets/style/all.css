@@ -1084,8 +1084,9 @@ body {
     font-size: 24px;
     font-weight: 500;
     padding: 12px 24px;
-    border: 1px solid #00000021; }
+    border-bottom: 1px solid #00000021; }
   .location-Menu-Image {
+    display: block;
     width: 330px;
     height: 224px;
     -o-object-fit: cover;
