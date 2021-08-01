@@ -110,8 +110,6 @@ body {
       padding-right: 64px; }
       .header-Menu li a {
         color: #fff; }
-      .header-Menu li:last-child {
-        padding-right: 0; }
       @media (max-width: 992px) {
         .header-Menu li {
           padding-right: 40px; } }
